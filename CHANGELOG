@@ -1,5 +1,98 @@
 master
+    added:
+        - Catalog toggling icon.
+        - Fixed Logo Position option.
+        - OpenBSD, GNU, Plan9, Crunchbang emojis.
+        - Support for last.mu users (seaweedchan).
+    modified:
+        - Catalog style.
+        - Removed pony icons.
+    fixed:
+        - Support for 4chan Pass users.
+        - Catalog link in #pagesDrop not working (seaweedchan).
+        - QR warning being overlapped by / looking bad with spoiler checkbox (seaweedchan).
 
+2.4.9
+    fixed:
+        - Adding themes and mascots after deleting.
+2.4.8
+    fixed:
+        - Ads selector.
+        - QR field styles for firefox 19+.
+        - Adding themes and mascots after deleting.
+    modified:
+        - Settings window will now close when clicking outside of the window.
+        - Removed exsauce - use exlinks instead.
+
+2.4.7
+    fixed:
+        - Quote preview highlight style.
+        - Body scrollbars are no longer hidden when opening the settings menu.
+    modified:
+        - Script will no longer execute on rs.4chan.org.
+
+2.4.6
+    fixed:
+        - Default 4chan extension is disabled automatically.
+
+2.4.5
+    fixed:
+        - Fix 4chan X settings styling issues.
+        - Fix SS button not showing up.
+        - 4sight button.
+    modified:
+        - Default 4chan extension settings button is hidden.
+2.4.4
+    fixed:
+        - Board specific mascots.
+        - Custom nav links updating after save.
+        - ExLinks menu button being replaced on options reload.
+    modified:
+        - Youtube Link Title links should look better when using bitmap fonts.
+2.4.3
+    fixed:
+        - Made announcement readable.
+        - ID text color when hovered.
+        - Mascots alignment.
+        - Filtered backlinks style.
+     modified:
+        - Overflowing mascots can now have their positions set.
+2.4.2a
+    fixed:
+        - Script.
+2.4.2
+    fixed:
+        - Highlighted post style.
+        - Select all mascots button selected hidden mascots.
+2.4.1
+    added:
+        - Emoji position option.
+        - Rounded edges option.
+        - Madotsuki emoji.
+        - 2 new themes from OneeChan.
+    fixed:
+        - Menu buttons inside inline posts.
+        - Some holes in the NSFW theme setting.
+2.4.0
+    fixed:
+        - Various checkboxes not being riced on page load.
+        - E-hentai source can actually be disabled.
+        - Delay when inserting CSS in Firefox. (should reduce some flashing)
+        - 4chan X menu font color.
+        - Text that is normally bold will be if you are not using a bitmap font.
+        - Quote threading style.
+        - /f/ is usable.
+        - Mascot and theme system were a mess when deleting/hiding things, should be much better now.
+        - Default mascots can be edited similar to default themes.
+        - Tripcode hider on page load.
+    added:
+        - 4chan Sound Player CSS.
+        - 4chan Sound Player icon, [not] watched thread icons, and icons for X/SS.
+    modified:
+        - 4sight looks a lot better.
+        - Icons completely redone.
+        - Top navigation spans 100%.
+        - Non OP 4chan X menu buttons are hidden until hovered over the post (like OneeChan).
 2.3.2
     fixed:
         - Tripcode hider.
