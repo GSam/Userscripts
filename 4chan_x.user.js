@@ -2415,20 +2415,7 @@
         });
         ta.style.cssText = $.get('QR.size', '');
       }
-      mimeTypes = $('ul.rules').firstElementChild.textContent.trim().match(/: (.+)/)[1].toLowerCase().replace(/\w+/g, function(type) {
-        switch (type) {
-          case 'jpg':
-            return 'image/jpeg';
-          case 'pdf':
-            return 'application/pdf';
-          case 'swf':
-            return 'application/x-shockwave-flash';
-          default:
-            return "image/" + type;
-        }
-      });
-      QR.mimeTypes = mimeTypes.split(', ');
-      QR.mimeTypes.push('');
+      QR.mimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 'application/x-shockwave-flash', '']
       fileInput = $('input[type=file]', QR.el);
       fileInput.max = $('input[name=MAX_FILE_SIZE]').value;
       if ($.engine !== 'presto') {
