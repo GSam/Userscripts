@@ -2433,7 +2433,7 @@
                     onload: function(x)
                     {
                         var temp = $("<div>").html(x.responseText),
-                            results = $("div.it3>a:not([rel='nofollow']),div.itd2>a:not([rel='nofollow'])", temp),
+                            results = $("div.it3>div>a:not([rel='nofollow']),div.it2>img:not([rel='nofollow'])", temp),
                             MAX = results.length();
 
                         anchor.html("found: " + MAX).attr("target", "_blank");
