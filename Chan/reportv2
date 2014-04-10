@@ -1,0 +1,1 @@
+javascript:function%20f(){window.open("https://sys.4chan.org/a/imgboard.php?mode=report&no="+document.URL.substring(30),%20"_blank",%20"width%20=%20600,%20height%20=%20180");%20if(window.document.URL.indexOf("boards.4chan.org/a")%20!=%20-1){window.open('',%20'_self',%20'');%20window.close();}}%20f();
