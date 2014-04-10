@@ -2421,7 +2421,7 @@
         });
         ta.style.cssText = $.get('QR.size', '');
       }
-      QR.mimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 'application/x-shockwave-flash', '']
+      QR.mimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 'application/x-shockwave-flash', 'video/webm','']
       fileInput = $('input[type=file]', QR.el);
       fileInput.max = $('input[name=MAX_FILE_SIZE]').value;
       if ($.engine !== 'presto') {
