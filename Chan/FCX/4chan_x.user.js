@@ -5393,9 +5393,17 @@
         img.hidden = false;
         return;
       }
-      img = $.el('img', {
-        src: src
-      });
+        
+      if (/\.webm$/.test(src)) {
+          img = $.el('video', {
+          src: src
+          });
+      } else {
+          img = $.el('img', {
+          src: src
+          });
+      }
+        
       $.on(img, 'error', ImageExpand.error);
       return $.after(thumb, img);
     },
@@ -6225,6 +6233,7 @@ h1 {\
   max-width: 100%;\
 }\
 .gecko  .fitwidth img[data-md5] + img,\
+.gecko  .fitwidth img[data-md5] + video,\
 .presto .fitwidth img[data-md5] + img {\
   width: 100%;\
 }\
