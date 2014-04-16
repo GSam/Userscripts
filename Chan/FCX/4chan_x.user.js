@@ -5396,8 +5396,9 @@
         
       if (/\.webm$/.test(src)) {
           img = $.el('video', {
-          src: src
+              src: src, loop: true
           });
+          img.play();
       } else {
           img = $.el('img', {
           src: src
