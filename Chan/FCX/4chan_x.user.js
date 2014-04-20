@@ -756,7 +756,7 @@
       var file, fileInfo;
       fileInfo = post.fileInfo;
       if (fileInfo) {
-        if (file = $('.fileText > span', fileInfo)) {
+        if (file = $('.fileText > a', fileInfo)) {
           return file.title;
         } else {
           return fileInfo.firstElementChild.dataset.filename;
@@ -3693,7 +3693,7 @@
       }
       node = post.fileInfo;
       alt = post.img.alt;
-      filename = ((_ref = $('span[title]', node)) != null ? _ref.title : void 0) || ((_ref1 = $('span', node)) != null ? _ref1.textContent : void 0) || node.title;
+      filename = ((_ref = $('span[title]', node)) != null ? _ref.title : void 0) || ((_ref1 = $('a', node)) != null ? _ref1.textContent : void 0) || node.title;
       FileInfo.data = {
         link: post.img.parentNode.href,
         spoiler: /^Spoiler/.test(alt),
