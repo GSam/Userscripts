@@ -4126,7 +4126,7 @@
         if (href[0] === '/') {
           continue;
         }
-        quote.href = "/" + board + "/thread/" +threadID + href;
+        quote.href = "/" + board + "/thread/" + (href.startsWith(threadID + "#p") ? "" : threadID) + href;
       }
       return container;
     }
