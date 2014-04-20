@@ -5511,6 +5511,7 @@
       g.BOARD = pathname[0], temp = pathname[1];
       switch (temp) {
         case 'res':
+        case 'thread':
           g.REPLY = true;
           g.THREAD_ID = pathname[2];
           break;
