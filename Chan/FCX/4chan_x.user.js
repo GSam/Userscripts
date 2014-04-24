@@ -3693,7 +3693,7 @@
       }
       node = post.fileInfo;
       alt = post.img.alt;
-      filename = ((_ref = $('span[title]', node)) != null ? _ref.title : void 0) || ((_ref1 = $('a', node)) != null ? _ref1.textContent : void 0) || node.title;
+      filename = ((_ref = $('a[title]', node)) != null ? _ref.title : void 0) || ((_ref1 = $('a', node)) != null ? _ref1.textContent : void 0) || node.title;
       FileInfo.data = {
         link: post.img.parentNode.href,
         spoiler: /^Spoiler/.test(alt),
