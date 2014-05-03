@@ -1639,7 +1639,7 @@
     },
     qr: function(thread, quote) {
       if (quote) {
-        QR.quote.call($('a[title="Quote this post"]', $('.post.highlight', thread) || thread));
+        QR.quote.call($('a[title="Reply to this post"]', $('.post.highlight', thread) || thread));
       } else {
         QR.open();
       }
@@ -1797,7 +1797,7 @@
       return $.on(d, 'dragstart dragend', QR.drag);
     },
     node: function(post) {
-      return $.on($('a[title="Quote this post"]', $('.postInfo', post.el)), 'click', QR.quote);
+      return $.on($('a[title="Reply to this post"]', $('.postInfo', post.el)), 'click', QR.quote);
     },
     open: function() {
       if (QR.el) {
