@@ -2543,7 +2543,7 @@
           err = 'No valid captcha.';
         } else {
           response = response.trim();
-          if (!/\s/.test(response)) {
+          if (!/\s|^\d+$/.test(response)) {
             response = "" + response + " " + response;
           }
         }
@@ -5541,7 +5541,7 @@
                 var response;
                 e.preventDefault();
                 response = field.value.trim();
-                if (!/\s/.test(response)) {
+                if (!/\s|^\d+$/.test(response)) {
                   field.value = "" + response + " " + response;
                 }
                 return form.submit();
