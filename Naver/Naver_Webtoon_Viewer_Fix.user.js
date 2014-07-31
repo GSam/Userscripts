@@ -31,4 +31,4 @@ document.addEventListener('beforescriptexecute', function(e) {
 
 }, true);
 
-GM_addStyle("img { width:auto !important; height:auto !important;  display: block !important; margin-left: auto !important; margin-right: auto !important;}");
+GM_addStyle("img._checkVisible { width:auto !important; height:auto !important;  display: block !important; margin-left: auto !important; margin-right: auto !important;}");
