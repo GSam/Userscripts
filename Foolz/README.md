@@ -1,1 +1,1 @@
-Image expander for Foolz
+Image expander for Foolz and archived post finder.
