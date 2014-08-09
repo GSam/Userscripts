@@ -21,9 +21,7 @@ window.addEventListener("DOMContentLoaded", function() {
             } else {
                 $image.html('<img src="' + $link + '"/>')
             }
-        
-        
-    });  
+        });  
     });
           
     $('.letters').append('[<a href=# >' + $('.post_wrapper').length + ' / ' +  $('.thread_image_link').length + '</a>]');
