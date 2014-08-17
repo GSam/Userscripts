@@ -9,13 +9,10 @@
 // @include        http*://boards.4chan.org/*
 // @include        http*://images.4chan.org/*
 // @include        http*://sys.4chan.org/*
-// @grant          GM_getValue
-// @grant          GM_setValue
-// @grant          GM_deleteValue
-// @grant          GM_openInTab
+// @grant none
 // @run-at         document-start
-// @updateURL      https://github.com/ahodesuka/4chan-x/raw/stable/4chan_x.user.js
-// @downloadURL    https://github.com/ahodesuka/4chan-x/raw/stable/4chan_x.user.js
+// @updateURL      https://github.com/GSam/Userscripts/raw/master/Chan/FCX/4chan_x.user.js
+// @downloadURL    https://github.com/GSam/Userscripts/raw/master/Chan/FCX/4chan_x.user.js
 // @icon           data:image/gif;base64,R0lGODlhEAAQAKECAAAAAGbMM////////yH5BAEKAAIALAAAAAAQABAAAAIxlI+pq+D9DAgUoFkPDlbs7lGiI2bSVnKglnJMOL6omczxVZK3dH/41AG6Lh7i6qUoAAA7
 // ==/UserScript==
 //
