@@ -4,6 +4,7 @@
 // @version    0.1.0
 // @description Image expander
 // @match      *://archive.foolz.us/*
+// @match      *://archive.moe/*
 // @copyright  2013, GSam
 // ==/UserScript==
 
