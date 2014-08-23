@@ -5,6 +5,8 @@
 // @description Image expander
 // @match      *://archive.foolz.us/*
 // @match      *://archive.moe/*
+// @updateURL  https://raw.githubusercontent.com/GSam/Userscripts/master/Foolz/foolz.js
+// @downloadURL https://raw.githubusercontent.com/GSam/Userscripts/master/Foolz/foolz.js
 // @copyright  2013, GSam
 // ==/UserScript==
 
