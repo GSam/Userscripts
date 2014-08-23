@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Foolz All Image Expander
 // @namespace  foolzimageexpander
-// @version    0.1.0
+// @version    0.1.1
 // @description Image expander
 // @match      *://archive.foolz.us/*
 // @match      *://archive.moe/*
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function() {
     $('.letters').append('[<a href=# >' + $('.post_wrapper').length + ' / ' +  $('.thread_image_link').length + '</a>]');
     $('.post_controls').each(function(e,i){
         if (i.children.length === 4) return;
-        $(i).append('<a class="btnr parent" href="' +i.children[0].href.replace("archive.foolz.us", "boards.4chan.org") + '">Original</a>');
+        $(i).append('<a class="btnr parent" href="' +i.children[0].href.replace(/archive.foolz.us|archive.moe/g, "boards.4chan.org") + '">Original</a>');
     });
    
 }, false);
