@@ -2716,13 +2716,13 @@
         notice.style.color = 'red';
         $.prepend(setting, [$.tn('['), notice, $.tn('] ')]);
       }
-      if (!$.get('firstrun')) {
+      /*if (!$.get('firstrun')) {
         $.set('firstrun', true);
         if (!Favicon.el) {
           Favicon.init();
         }
         return Options.dialog();
-      }
+      }*/
     },
     dialog: function() {
       var arr, back, checked, description, dialog, favicon, fileInfo, filter, hiddenNum, hiddenThreads, indicator, indicators, input, key, li, obj, overlay, sauce, time, tr, ul, _i, _len, _ref, _ref1, _ref2;
@@ -3213,8 +3213,25 @@
             break;
           case 200:
             Updater.lastModified = this.getResponseHeader('Last-Modified');
-            Updater.cb.update(JSON.parse(this.response).posts);
-            Updater.set('timer', -Conf['Interval']);
+            var postlist = JSON.parse(this.response).posts;
+            if (postlist[0].closed === 1) {
+              Updater.set('timer', '');
+              Updater.set('count', 404);
+              Updater.count.className = 'warning';
+              clearTimeout(Updater.timeoutID);
+              g.dead = true;
+              if (Conf['Unread Count']) {
+                Unread.title = Unread.title.match(/^.+-/)[0] + ' 404';
+              } else {
+                d.title = d.title.match(/^.+-/)[0] + ' 404';
+              }
+              Unread.update(true);
+              QR.abort();
+              QR.close();
+            } else {
+              Updater.cb.update(postlist);
+              Updater.set('timer', -Conf['Interval']);
+            }
             break;
           default:
             Updater.set('timer', -Conf['Interval']);
@@ -5917,7 +5934,7 @@
       return $.globalEval(("(" + code + ")()").replace('_id_', bq.id));
     },
     namespace: '4chan_x.',
-    version: '2.39.9',
+    version: '2.39.10',
     callbacks: [],
     css: '\
 /* dialog styling */\
