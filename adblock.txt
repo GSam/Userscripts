@@ -1,0 +1,22 @@
+[Adblock Plus 2.0]
+! Checksum: QYHVaQFqxKtq7qCNnCUlcQ
+! [Exception Rules]/whitelist
+@@||static.mangafox.com.nyud.net^
+@@||mfcdn.net^
+@@||freerice.com^$document
+@@||crunchyroll.com/comics^$document
+@@||crunchyroll.com/comics_read^$document
+! [Ad Blocking Rules]/blocking
+||ninja.game321.com^$popup
+||youtube.com/v/*$domain=boards.4chan.org
+||s.ytimg.com/yts/swfbin/*$domain=boards.4chan.org
+||s.ytimg.com/yts/cssbin/*$domain=boards.4chan.org
+||s.ytimg.com/yts/jsbin/*$domain=boards.4chan.org
+||static.4chan.org/image/temp/*
+||youtube-nocookie.com/embed/*$domain=boards.4chan.org
+mediafire.com###onBoardingList
+|http://img.batoto.net/comics/misc/block-notice.png
+|http://emoticoner.com/files/emoticons/*
+||connect.facebook.net/en_US/*$domain=comic-walker.com
+||www3.game-advertising-online.com^
+||manga.madokami.com/res/*$image
