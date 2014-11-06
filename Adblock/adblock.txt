@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Checksum: f/l1wqM9VPoJQG/ugMbS7A
+! Checksum: fl1wqM9VPoJQGugMbS7A
 ! [Exception Rules]/whitelist
 @@||static.mangafox.com.nyud.net^
 @@||mfcdn.net^
