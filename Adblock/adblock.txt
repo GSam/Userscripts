@@ -20,3 +20,5 @@ mediafire.com###onBoardingList
 ||connect.facebook.net/en_US/*$domain=comic-walker.com
 ||www3.game-advertising-online.com^
 ||manga.madokami.com/res/*$image
+nyaa.se##.content.chatbox
+files.nyaa.se/ag*.jpg
