@@ -75,7 +75,7 @@
  */
 
 (function() {
-  var $, $$, Anonymize, ArchiveLink, AutoGif, Build, CatalogLinks, Conf, Config, DeleteLink, DownloadLink, ExpandComment, ExpandThread, Favicon, FileInfo, Filter, Get, ImageExpand, ImageHover, Keybinds, Main, Menu, Nav, Options, PngFix, QR, QuoteBacklink, QuoteCT, QuoteInline, QuoteOP, QuotePreview, Quotify, Redirect, RelativeDates, ReplyHiding, ReportLink, RevealSpoilers, Sauce, StrikethroughQuotes, ThreadHiding, ThreadStats, Time, TitlePost, UI, Unread, Updater, Watcher, d, g;
+  var $, $$, Anonymize, ArchiveLink, AutoGif, Build, CatalogLinks, Conf, Config, DeleteLink, DownloadLink, ExpandComment, ExpandThread, Favicon, FileInfo, Filter, Get, ImageExpand, ImageHover, Keybinds, Main, Menu, Nav, Options, PngFix, QR, QuoteBacklink, QuoteCT, QuoteInline, QuoteOP, QuotePreview, Quotify, Redirect, RelativeDates, RemoveSlug, ReplyHiding, ReportLink, RevealSpoilers, Sauce, StrikethroughQuotes, ThreadHiding, ThreadStats, Time, TitlePost, UI, Unread, Updater, Watcher, d, g;
 
   Config = {
     main: {
@@ -5472,6 +5472,35 @@
     }
   };
 
+
+  RemoveSlug = {
+      init: function() {
+          var catalogdiv;
+          var threads = [];
+          if (g.CATALOG) {
+              catalogdiv = document.getElementsByClassName('thread');
+              for (var i = 0; i < catalogdiv.length; i++) {
+                  threads.push(catalogdiv[i].firstElementChild);
+              }
+          } else {
+              threads = document.getElementsByClassName('replylink');
+          }
+          return RemoveSlug.deslug(threads);
+      },
+      deslug: function(els) {
+          var el;
+          for (var i = 0; i < els.length; i++) {
+              el = els[i];
+              path = el.pathname;
+              if (path.slice(1).split('/').length > 3) {
+                  el.pathname = path.substring(0, path.lastIndexOf('/'));
+              }
+          }
+          return;
+      }
+  };
+
+
   CatalogLinks = {
     init: function() {
       var clone, el, nav, _i, _len, _ref;
@@ -5606,6 +5635,7 @@
       }
     },
     catalog: function() {
+      $.ready(RemoveSlug.init);
       if (Conf['Catalog Links']) {
         CatalogLinks.init();
       }
@@ -5790,6 +5820,7 @@
           Unread.init();
         }
       } else {
+        RemoveSlug.init();
         if (Conf['Thread Hiding']) {
           ThreadHiding.init();
         }
