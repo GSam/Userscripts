@@ -5480,7 +5480,9 @@
           if (g.CATALOG) {
               catalogdiv = document.getElementsByClassName('thread');
               for (var i = 0; i < catalogdiv.length; i++) {
-                  threads.push(catalogdiv[i].firstElementChild);
+                  var catalogTemp = catalogdiv[i].firstElementChild;
+                  threads.push(catalogTemp);
+                  catalogTemp.target = '_blank';
               }
           } else {
               threads = document.getElementsByClassName('replylink');
