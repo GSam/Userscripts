@@ -4937,9 +4937,9 @@
         case 'vp':
         case 'vr':
         case 'wsg':
-          return "//archive.foolz.us/" + board + "/full_image/" + filename;
+          return "//archive.moe/" + board + "/full_image/" + filename;
         case 'u':
-          return "//nsfw.foolz.us/" + board + "/full_image/" + filename;
+          return "//nsfw.archive.moe/" + board + "/full_image/" + filename;
         case 'po':
           return "//archive.thedarkcave.org/" + board + "/full_image/" + filename;
         case 'hr':
@@ -5001,9 +5001,9 @@
         case 'vp':
         case 'vr':
         case 'wsg':
-          return "https://archive.foolz.us/_/api/chan/post/?board=" + board + "&num=" + postID;
+          return "https://archive.moe/_/api/chan/post/?board=" + board + "&num=" + postID;
         case 'u':
-          return "https://nsfw.foolz.us/_/api/chan/post/?board=" + board + "&num=" + postID;
+          return "https://nsfw.moe/_/api/chan/post/?board=" + board + "&num=" + postID;
         case 'int':
         case 'out':
         case 'po':
@@ -5057,10 +5057,10 @@
         case 'vp':
         case 'vr':
         case 'wsg':
-          url = Redirect.path('//archive.foolz.us', 'foolfuuka', data);
+          url = Redirect.path('//archive.moe', 'foolfuuka', data);
           break;
         case 'u':
-          url = Redirect.path('//nsfw.foolz.us', 'foolfuuka', data);
+          url = Redirect.path('//nsfw.archive.moe', 'foolfuuka', data);
           break;
         case 'int':
         case 'out':
