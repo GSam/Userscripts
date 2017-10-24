@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while [ 1 ]
+do
+        wget 'http://www.nzx.com' --user-agent="Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" -q -S -O - 2>/dev/null | xmllint --html -xpath './/ul[@id="featured-indices"]' - 2>/dev/null | html2text | cut -d'/' -f2 | sed "s,+.*,$(tput setaf 2)&$(tput sgr0)," | sed "s,-.*,$(tput setaf 1)&$(tput sgr0),"
+        sleep 360
+        clear
+done
