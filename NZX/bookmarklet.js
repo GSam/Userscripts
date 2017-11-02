@@ -30,5 +30,5 @@
     cell.innerHTML = '$' + (total_value - total_prev_value).toFixed(3) + " / " + ((total_value - total_prev_value) * 100 / total_prev_value).toFixed(3) + '%';
     cell = newrow.insertCell(-1);
     cell.setAttribute('class', 'text-right');
-    cell.innerHTML = '$' + total_value;
+    cell.innerHTML = '$' + total_value.toFixed(3);
 }
