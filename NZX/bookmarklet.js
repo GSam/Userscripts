@@ -1,5 +1,5 @@
 {
-    var table = document.querySelector('.table-to-list.instruments-table > tbody');
+    var table = document.querySelector('.table-to-list.instruments-table > tbody, .m-table-to-list.instruments-table > tbody');
     let total_value = 0.0;
     let total_prev_value = 0.0;
     for (var i = 0, row; row = table.rows[i]; i++) {
