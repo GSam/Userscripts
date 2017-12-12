@@ -1,0 +1,3 @@
+#!/bin/bash
+
+purple-remote-custom "facebook:setstatus?status=available"
