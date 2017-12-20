@@ -1,0 +1,20 @@
+dmpbooks.com##div[id="lightbox-overlay"]
+dmpbooks.com##div[id="lightbox"]
+||dmpbooks.com/includes/jquery_lightbox/css/*
+||s.4cdn.org/css/spooky.635.css
+outlook.live.com##div[id="owaadbar"]
+feedly.com##div[id="searchPromo"]
+nzherald.co.nz##section[class="relatedArticles relatedArticlesInCopy"]
+||gstatic.com/recaptcha/*$domain=boards.4chan.org
+
+@@||bitcoinget.com^$document
+@@|http://www.stumbleupon.com/su/2A5SbC/?$document
+@@||a.4cdn.org/adv*
+@@||sys.4chan.org/adv*
+@@||hulu.com^$document
+@@||forums.hummingbird.me^$document
+@@||online.asb.co.nz
+@@|http://www.interest.co.nz/saving/term-deposits-1-to-5-years|$document
+
+||assets.stuff.co.nz/sponsored/*
+www.stuff.co.nz##.twominutes-pointer
