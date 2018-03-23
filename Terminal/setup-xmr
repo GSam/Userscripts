@@ -1,0 +1,14 @@
+#!/bin/bash
+
+git clone https://github.com/fireice-uk/xmr-stak.git
+sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
+mkdir xmr-stak/build
+cd xmr-stak/build
+cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
+make install
+
+cat > /tmp/cron << EOF
+@reboot screen -d -m ~/xmr-stak/build/bin/xmr-stak
+EOF
+
+sudo su ubuntu -c crontab /tmp/cron
