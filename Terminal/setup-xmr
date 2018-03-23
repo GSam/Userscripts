@@ -14,3 +14,5 @@ cat > /tmp/cron << EOF
 EOF
 
 crontab /tmp/cron
+
+sudo shutdown -r now
