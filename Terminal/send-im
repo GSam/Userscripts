@@ -1,3 +1,7 @@
 #!/bin/bash
 
-tee | EDITOR="vim -c startinsert" vipe | tee /tmp/.last_im | xargs -0 -i purple-remote-custom "facebook:goim?alias=$@&message={}"
+if [ -t 0 ]; then
+    echo | EDITOR="vim -c startinsert" vipe | tee /tmp/.last_im | xargs -0 -i purple-remote-custom "facebook:goim?alias=$@&message={}"
+else
+    tee | EDITOR="vim -c startinsert" vipe | tee /tmp/.last_im | xargs -0 -i purple-remote-custom "facebook:goim?alias=$@&message={}"
+fi
