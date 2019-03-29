@@ -11,7 +11,7 @@ cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
 
 cat > /tmp/cron << EOF
-@reboot screen -d -m ~/xmr-stak/build/bin/xmr-stak -u $USERNAME -p $PASSWORD --url $URL --currency monero7 -i 0 -r 0
+@reboot screen -S xmr -d -m ~/xmr-stak/build/bin/xmr-stak -u $USERNAME -p $PASSWORD --url $URL --currency monero7 -i 0 -r 0
 EOF
 crontab /tmp/cron
 
